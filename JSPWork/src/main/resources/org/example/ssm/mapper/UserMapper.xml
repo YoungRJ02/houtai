@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.ssm.mapper.UserMapper">
+
+    <!--public User findOne()-->
+    <select id="findOne" resultType="User">
+        select * from logandre where Username = #{Username} and Password = #{Password};
+    </select>
+
+    <!--public void addOne()-->
+    <insert id="addOne">
+        insert into logandre values (#{Username}, #{Password}, #{Uphone}, #{Umail}, #{Uaddress});
+    </insert>
+
+    <!--checkReg(String username)-->
+    <select id="checkReg" resultType="User">
+        select * from logandre where Username = #{Username};
+    </select>
+
+    <!--User delete(User user);-->
+    <delete id="delete">
+        delete from logandre where Username = #{Username};
+    </delete>
+
+    <!--User update(User user);-->
+    <update id="update">
+        update logandre set Username = #{Username}, Password = #{Password}, Uphone = #{Uphone}, Umail = #{Umail}, Uaddress = #{Uaddress} where Username = #{Username};
+    </update>
+</mapper>

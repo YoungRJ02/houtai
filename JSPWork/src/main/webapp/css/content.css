@@ -1,0 +1,85 @@
+body{
+    background: url("/images/bg3.jpg") no-repeat;
+    background-size: cover;
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 10vh;
+}
+
+.header .left{
+    width: 30%;
+    height: 90%;
+    margin-left: 7vw;
+    float: left;
+}
+.header .left p{
+    font-family: 华文行楷;
+    font-size: 45px;
+    color: #1a36d7;
+}
+.header .right {
+    width: 45%;
+    height: 90%;
+    margin-left: 10px;
+    float: left;
+    padding-top: 18px;
+}
+.header .right p{
+    font-family: 华文行楷;
+    font-size:30px;
+}
+
+main {
+    height: 670px;
+    width: 100%;
+    display: flex;
+}
+
+main .left {
+    height: 99%;
+    width: 50vw;
+    padding: 10px;
+    margin-left: 50px;
+    margin-top: 25px;
+    background: rgba(105, 105, 105, 0.4);
+}
+.left .span{
+    width: 100%;
+    height: 4%;
+}
+.left .left_container {
+    display: flex;
+    width: 100%;
+    height: 44%;
+    background:rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+.left .left_container p{
+    text-indent: 2em;
+}
+left .left_container h1{
+    font-family: 华文行楷;
+    color: #1a36d7;
+    font-size: 40px;
+}
+
+main .right {
+    height: 500px;
+    flex: 1;
+    margin: 80px 30px 30px;
+    background: rgba(105, 105, 105, 0.4);
+}
+
+.right .right_container {
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    background-color: #545cb3;
+}

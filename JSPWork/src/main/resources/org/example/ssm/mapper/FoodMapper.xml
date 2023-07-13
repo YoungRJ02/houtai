@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.ssm.mapper.FoodMapper">
+
+    <!--Food find(Food food);-->
+    <select id="find" resultType="Food">
+        select * from food where Fname = #{Fname};
+    </select>
+
+    <!--Food check(Food food);-->
+    <select id="check" resultType="Food">
+        select * from food where Fname = #{Fname};
+    </select>
+
+    <!--void add(Food food);-->
+    <insert id="add">
+        insert into food values (#{Fname}, #{Fcategory}, #{Fintro}, #{Fhistory}, #{Fphoto})
+    </insert>
+
+    <!--Food delete(Food food);-->
+    <delete id="delete">
+        delete from food where Fname = #{Fname};
+    </delete>
+
+    <!--void update(Food food);-->
+    <update id="update">
+        update food set Fname = #{Fname}, Fcategory = #{Fcategory}, Fintro = #{Fintro}, Fhistory = #{Fhistory}, Fphoto = #{Fphoto} where Fname = #{Fname};
+    </update>
+</mapper>
