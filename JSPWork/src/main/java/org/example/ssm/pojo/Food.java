@@ -2,13 +2,6 @@ package org.example.ssm.pojo;
 
 public class Food {
     private String Fname;
-    private String Fcategory;
-    private String Fintro;
-    private String Fhistory;
-    private String Fphoto;
-
-    public Food() {
-    }
 
     public String getFname() {
         return Fname;
@@ -17,6 +10,25 @@ public class Food {
     public void setFname(String fname) {
         Fname = fname;
     }
+
+    private String Fcategory;
+    private String Fintro;
+    private String Fhistory;
+    private String Fphoto;
+    private String result;
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public Food() {
+    }
+
+
 
     public String getFcategory() {
         return Fcategory;

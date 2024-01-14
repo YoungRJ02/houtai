@@ -5,8 +5,8 @@
 <mapper namespace="org.example.ssm.mapper.FoodMapper">
 
     <!--Food find(Food food);-->
-    <select id="find" resultType="Food">
-        select * from food where Fname = #{Fname};
+    <select id="find" parameterType="string" statementType="CALLABLE" resultType="Food">
+        {call demo3(#{Fname, mode = IN})}
     </select>
 
     <!--Food check(Food food);-->
@@ -15,17 +15,17 @@
     </select>
 
     <!--void add(Food food);-->
-    <insert id="add">
-        insert into food values (#{Fname}, #{Fcategory}, #{Fintro}, #{Fhistory}, #{Fphoto})
+    <insert id="add" parameterType="string" statementType="CALLABLE">
+        {call demo(#{Fname, mode = IN}, #{Fcategory, mode = IN}, #{Fintro, mode = IN}, #{Fhistory, mode = IN}, #{Fphoto, mode = IN})}
     </insert>
 
     <!--Food delete(Food food);-->
-    <delete id="delete">
-        delete from food where Fname = #{Fname};
+    <delete id="delete" parameterType="string" statementType="CALLABLE">
+        {call demo2(#{Fname, mode = IN})}
     </delete>
 
     <!--void update(Food food);-->
-    <update id="update">
-        update food set Fname = #{Fname}, Fcategory = #{Fcategory}, Fintro = #{Fintro}, Fhistory = #{Fhistory}, Fphoto = #{Fphoto} where Fname = #{Fname};
+    <update id="update" parameterType="string" statementType="CALLABLE">
+        {call demo4(#{Fname, mode = IN}, #{Fcategory, mode = IN}, #{Fintro, mode = IN}, #{Fhistory, mode = IN}, #{Fphoto, mode = IN})}
     </update>
 </mapper>

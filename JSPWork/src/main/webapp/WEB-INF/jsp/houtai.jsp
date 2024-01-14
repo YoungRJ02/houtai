@@ -27,7 +27,6 @@
             width: 500px;
             margin-left: 12px;
             flex: 1;
-            background: url(/images/bg5.jpg) no-repeat;
             background-size: cover;
             display: flex;
         }
@@ -100,6 +99,16 @@
                 </li>
                 <li class="nav-list">
                     <h2><a href="http://localhost:8080/JSPWork/userhoutai" target="TT">用户信息</a>
+                        <i></i>
+                    </h2>
+                </li>
+                <li class="nav-list">
+                    <h2><a href="http://localhost:8080/JSPWork/showdeletefood" target="TT">已删食物</a>
+                        <i></i>
+                    </h2>
+                </li>
+                <li class="nav-list">
+                    <h2><a href="http://localhost:8080/JSPWork/foodlog" target="TT">修改记录</a>
                         <i></i>
                     </h2>
                 </li>
